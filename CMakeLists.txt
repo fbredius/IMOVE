@@ -4,7 +4,7 @@ PROJECT(imove)
 
 FIND_PACKAGE(OpenCV REQUIRED )
 INCLUDE_DIRECTORIES( ${OPENCV_INCLUDE_DIR} )
-
+add_compile_options(-Wno-delete-non-virtual-dtor)
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
 CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
